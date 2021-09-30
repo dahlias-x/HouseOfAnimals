@@ -22,3 +22,15 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/master', function () {
+    return view('master');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/create', function () {
+    return view('createPost');
+});
