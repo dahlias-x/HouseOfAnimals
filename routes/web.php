@@ -23,7 +23,18 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+
 Route::get('/home', 'ArticleController@showAll');
 
 //Route::get('/createBlog', 'createBlogController@createBlog');
 Route::get('/createBlog', 'TestController@showAll');
+
+Route::get('/master', function () {
+    return view('master');
+});
+
+
+Route::get('/create', function () {
+    return view('createPost');
+});
+

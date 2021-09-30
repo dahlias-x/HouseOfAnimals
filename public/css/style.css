@@ -1,0 +1,550 @@
+:root{
+    --primaryColor: #EEE5D8;
+    --secondaryColor: #D8782E;
+    --thirdColor: #455F6C;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* ######################
+    GENERAL STYLING
+##################### */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--white);
+    position: relative;
+}
+
+/* -------------------
+    navbar styling
+------------------- */
+nav, footer{
+    background-color: var(--primaryColor);
+}
+
+nav{
+    display: flex !important;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* list of all links to other pages */
+.nav-list{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 20px;
+    align-items: center;
+    font-weight: 600;
+    padding: 0px;
+}
+
+/* all links */
+.navItem {
+    list-style: none;
+    margin-left: 50px;
+}
+
+/* link styling */
+.navlink{
+    text-decoration: none;
+    color: var(--thirdColor) !important;
+    text-transform: uppercase;
+}
+
+.navlink.active, .navlink:focus,  .navlink:hover {
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 3px solid var(--secondaryColor);
+    color: var(--secondaryColor) !important;
+}
+
+/* signup button in navbar */
+.sign-up{
+    margin-left: 50px !important;
+    background-color: var(--secondaryColor);
+    border: none;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.sign-up a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.sign-up:hover, .sign-up a:hover{
+    background-color: var(--thirdColor);
+    color: white !important;
+
+}
+
+.navbar-toggler{
+    border: 3px solid var(--thirdColor) !important;
+}
+
+
+/* ----------------
+    image header
+---------------- */
+
+.img-header{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.img-header img{
+    object-fit: cover;
+    width: 100%;
+    margin: -450px 0 0 0;
+    opacity: 0.8;
+}
+
+
+/* -----------------
+    welcome text
+----------------- */
+.welcome-container{
+    text-align: center;
+}
+.welcome-title{
+    color: var(--secondaryColor);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.welcome-text{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.8;
+    color: var(--thirdColor);
+}
+
+
+/* ----------------------------
+    articles tabs navigation
+--------------------------- */
+
+/* title */
+.tabs-title {
+    text-align: center;
+    font-weight: 600;
+    color: var(--secondaryColor);
+    font-size: 40px;
+    text-transform: uppercase;
+}
+/* article images */
+.dimension {
+    width: 500px !important;
+    height: 300px !important;
+    padding: 10px !important;
+    border-radius: 0px;
+    border: none;
+    border-right: 1px solid #dee2e6;
+}
+
+/* nav tabs */ 
+.nav-tabs .nav-link.active {
+    background-color: var(--secondaryColor) !important;
+    color: var(--white) !important;
+    border: 2px solid var(--secondaryColor) !important;
+    font-weight: 600;
+}
+
+.nav-tabs .nav-link {
+    color: var(--thirdColor);
+    margin-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.nav-tabs .nav-link:hover {
+    border: 1px solid var(--secondaryColor) !important;
+    color: var(--secondaryColor);
+}
+
+.nav-tabs {
+    border-bottom: 1px solid var(--secondaryColor) !important;
+}
+
+/* tab content */
+.tab-content {
+    margin-top: 20px;
+}
+
+.article-content{
+    margin-top: 15px !important;
+    padding: 20px 40px !important;
+}
+
+.article-content h2{
+    margin-bottom: 30px;
+}
+/* read button */
+.read-p{
+    margin-left: 0 !important;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.read-p a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.fa-home{
+    padding-right: 10px;
+}
+
+/* ------------
+    footer
+----------- */
+
+footer{
+    text-align: center;
+}
+
+.company{
+    color: var(--secondaryColor);
+}
+
+
+/* back to top btn styling */
+
+#btt-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    display: none;
+    background-color: var(--secondaryColor);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.fa-chevron-up{
+    color: var(--white);
+    font-size: 40px;
+    transform: translateX(-7px) translateY(-5px);
+}
+
+/*####################
+    MOBILE STYLING
+###################*/
+
+@media screen and (max-width: 500px) {
+
+    /* ------------------
+        navbar styling 
+    ------------------ */
+
+    .logo{
+        width: 190px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .fa-paw{
+        color: var(--secondaryColor) !important;
+        font-size: 30px !important;
+    }
+
+    .nav-list{
+        margin-left: -20px;
+    }
+
+    .navlink{
+        line-height: 2;
+    }
+
+    .sign-up{
+        margin-top: 20px;
+        color: var(--white) !important;
+        text-decoration: none !important;
+    }
+
+    #homePage{
+        display: none;
+    }
+
+    /* ------------------
+        banner image 
+    ----------------- */
+    .img-header{
+        height: 250px;
+    }
+    .img-header img{
+        margin: 0;
+    }
+
+
+    /* -----------------
+        welcome text 
+    ---------------- */
+    .welcome-title{
+        font-size: 26px;
+    }
+    .welcome-text{
+        font-size: 18px;
+    }
+
+
+    /* -------------------
+        articles section
+    ------------------ */
+    .tabs-title{
+        letter-spacing: 0;
+        font-size: 25px;
+    }
+    .nav-tabs{
+        display: flex;
+        justify-content: center;
+        margin-top: 0 !important;
+    }
+
+    .nav-link{
+        line-height: 2;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 16px;
+        margin-right: 0rem;
+    }
+
+    .dimension{
+        width: 100% !important;
+        height: auto !important;
+        padding: 7px !important;
+        border: none;
+    }
+
+    .article-content{
+        margin: 6px 0 !important;
+        padding: 0 3px !important;
+        text-align: center;
+    }
+    .article-title{
+        padding: 0 !important;
+        font-size: 20px;
+        margin: 0 !important;
+    }
+
+    .article-content p{
+        display: none;
+    }
+
+    .read-p{
+        display: none;
+    }
+
+    /* ------------------
+        back to top btn
+    ----------------- */
+    #btt-btn{
+        right: 20px;
+        bottom: 40px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .fa-chevron-up{
+        font-size: 30px;
+        transform: translateX(-6px);
+    }
+}
+
+
+
+
+/* ############################
+    CREATE POST PAGE STYLING
+########################### */
+
+
+
+/* ------------------------------
+    PAW STYLING FOR MOBILE MENU
+----------------------------- */
+
+.fa-paw{
+    color: var(--secondaryColor) !important;
+    font-size: 30px !important;
+}
+
+
+/* -----------------------
+    GENERAL SITE STYLING
+---------------------- */
+
+
+.site-container{
+    margin: 40px 0;
+    padding: 0;
+    width: 100%;
+}
+
+.site-title{
+    text-align: center !important;
+    width: 100%;
+    color: var(--secondaryColor);
+    margin-bottom: 30px;
+}
+
+.site-title h1{
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+/* -----------------
+    FORM STYLING
+--------------- */
+
+.form-container {
+    background-color: white ;
+    list-style: none;
+    margin: auto;
+    padding: 20px !important;
+    border-radius: 20px;
+    width: 620px;
+    box-shadow: 0px 0px 0px 2px #ccc9c97a;
+}
+
+/* FORM ITSELF */
+.newPost {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;  
+}
+
+
+/* ALL INPUTS STYLING */
+label {
+    margin: 20px 0 5px 0;
+    text-align: left;
+    font-weight: bold;
+    color: var(--thirdColor);
+}
+
+input, select {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 80% !important;
+    background-color: var(--primaryColor) !important;
+    color: var(--thirdColor) !important;
+}
+
+input:focus{
+    outline-color: var(--secondaryColor);
+}
+
+
+/* CATEGORY SELECTION STYLING */
+select {
+    -moz-appearance: none;
+    background: rgba(0, 0, 0, 0) url("/img/arrow.png") no-repeat scroll 100% center / 20px 13px !important;
+    border: none !important;
+    overflow: hidden !important;
+    padding: 10px !important;
+    width: auto;
+    background-color: var(--primaryColor) !important;
+    border-radius: 10px !important;
+}
+
+.fa-chevron-down{
+    font-size: 40px !important;
+    color: black !important;
+}
+
+
+/* TEXTAREA STYLING */
+textarea {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 95%;
+    height: 220px;
+    background-color: var(--primaryColor);
+    color: #002914;
+}
+
+textarea:focus{
+    outline-color: var(--secondaryColor);
+}
+
+
+/* CREATE POST BUTTON STYLING */
+.create{
+    background-color: var(--secondaryColor);
+    border: none;
+    color: var(--white);
+    font-weight: 600;
+    padding: 10px 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.create:hover{
+    background-color: var(--thirdColor) !important;
+    color: var(--white);
+}
+
+
+/* BACK TO HOMEPAGE BUTTON */
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+
+/* #################
+    MOBILE STYLING
+################ */
+
+@media screen and (max-width: 500px) {
+
+    .site-title h1{
+        font-size: 26px;
+    }
+    .form-container{
+        padding: 20px !important;
+    }
+
+    select{
+        background-color: var(--primaryColor) !important;
+    }
+
+    input, select, textarea{
+        width: 100% !important;
+    }
+    
+    .create{
+        align-self: center;
+    }
+
+    .home-container{
+        margin-top: 50px;
+        transform: translateX(-28px);
+    }
+}
