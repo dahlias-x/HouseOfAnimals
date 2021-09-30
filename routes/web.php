@@ -25,3 +25,5 @@ require __DIR__.'/auth.php';
 
 Route::get('/home', 'ArticleController@showAll');
 
+//Route::get('/createBlog', 'createBlogController@createBlog');
+Route::get('/createBlog', 'TestController@showAll');

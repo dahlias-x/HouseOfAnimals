@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->string('title', 100);
             $table->string('text', 500);
             $table->mediumInteger('like');
-            $table->string('pictures');
+            $table->mediumText('image')->nullable();
         });
     }
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use App\Models\articles;
+use App\Models\Articles;
 
 class ArticleController extends Controller
 {
@@ -15,5 +15,8 @@ class ArticleController extends Controller
         $articles = Articles::all();
     
         return view('home', ['articles' => $articles]); 
+    }
+    public function showCategory() {
+
     }
 }
