@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Categories;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -12,7 +12,7 @@ class CategoriesController extends Controller
 
     public function showAll() {
 
-        $Categories = Categories::all();
+        $Categories = Category::all();
     
         return view('home', ['Categories' => $Categories]); 
     }

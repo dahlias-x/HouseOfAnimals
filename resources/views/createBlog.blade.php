@@ -1,61 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-    <div class="container">
+@extends('master')
 
-        <form action="" method="POST" enctype="multipart/form-data">
+@section('title', 'Create a Post')
 
-            <div class="input-group">
+@section('content')
 
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input">
-                    <label class="custom-file-input">Choose file</label>
-                </div>
-            
-            </div>
-            {{-- <pre>
-                {{ var_dump($categories) }}
-            </pre> --}}
-            <div class="input-group">
-                <select name="Categories"> 
-                    @foreach ($categories as $category)  
-
-                        <option value="{{ $category->id }}">{{ $category->text }}</option>
-    
-                    @endforeach
-                </select> 
-            </div>
-
-            <div class="form-group">
-
-                <label>Titel</label>
-                <input type="text" class="form-control" placeholder="Enter Title">
-
-            </div>
-
-            <div class="form-group">
-
-                <label>Text</label>
-                <input type="text" class="form-control" placeholder="Enter Text">
-
-            </div>
-   
-
-
-
-
-
-
-
+<div class="img-header doggo-header">
+    <img src="img/doggies.jpeg" alt="">
+</div>
+<div class="container-fluid site-container">
+    <div class="site-title">
+        <h1>Create a new Post</h1>
     </div>
 
+    <div class="container form-container w-100">
+        <form class="newPost" action="/articleCreate" method="post">
+            <div class="form-group">
+                <label for="chooseCategory">Choose a picture</label>
+                <input type="file" class="form-control-file" id="chooseCategory">
+            </div>
+            <label for="category">Category</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                <option>-- Select Category --</option>
+                @foreach ($categories as $category) 
+                    <option value="{{ $category->id }}">{{ $category->text }}</option>
+                @endforeach
+            </select>
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="Title">
+            <label for="content">Text</label>
+            <textarea name="content" placeholder="Content"></textarea>
+            @csrf
+            <button class="new-post create" type="submit">Create</button>
+        </form>
+    </div>
 
-</body>
-</html>
+    <!-- back to home button -->
+    <div class="container-fluid home-container">
+        @csrf
+        <button class="sign-up home-btn"><a href="/home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></button>
+    </div>
+</div>
+<div class="container">
+    <form action="" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+            <div class="custom-file">
+                <input type="file" name="image" class="custom-file-input">
+                <label class="custom-file-input">Choose file</label>
+            </div>
+        </div>
+        <div class="input-group">
+            <select name="Categories"> 
+                @foreach ($categories as $category) 
+                    <option value="{{ $category->id }}">{{ $category->text }}</option>
+                @endforeach
+            </select> 
+        </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title"class="form-control" placeholder="Enter Title">
+        </div>
+        <div class="form-group">
+            <label>Text</label>
+            <input type="text" name="text" class="form-control" placeholder="Enter Text">
+        </div>
+</div>
+
+
+@endsection
+
+    
+
+
