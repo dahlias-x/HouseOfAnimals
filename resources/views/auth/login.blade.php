@@ -1,32 +1,25 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('master')
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+@section('title', 'House Of Animals')
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+@section('content')
 
-        <form method="POST" action="{{ route('login') }}">
+    <div class="container">
+        <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
             @csrf
 
             <!-- Email Address -->
             <div>
-                <x-label for="email" :value="__('Email')" />
+                <label for="email" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <input id="email" class="block mt-1 w-full" class="form-control" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <label for="password" :value="__('Password')" />
 
-                <x-input id="password" class="block mt-1 w-full"
+                <input id="password" class="block mt-1 w-full" class="form-control"
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password" />
@@ -47,10 +40,8 @@
                     </a>
                 @endif
 
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
+                <button class="sign-up"><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"> 
+                {{ __('Log in') }}</a></button>
             </div>
         </form>
-    </x-auth-card>
-</x-guest-layout>
+    </div> <!--container cls-->

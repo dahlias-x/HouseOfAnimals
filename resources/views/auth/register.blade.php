@@ -1,46 +1,46 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('master')
 
+@section('title', 'House Of Animals')
+
+@section('content')
+
+    <div class="container">
         <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+        <auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
             @csrf
 
             <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+            <div class="form-group"> 
+                <label for="name" :value="__('Name')">Name</label> 
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <input id="name" class="block mt-1 w-full" class="form-control" type="text" name="name" :value="old('name')" required autofocus placeholder="Enter Your Name" />
+                
             </div>
 
             <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+            <div class="form-group">
+                <label for="email" :value="__('Email')">Email</label>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <input id="email" class="block mt-1 w-full" class="form-control" type="email" name="email" :value="old('email')" required  placeholder="Enter Your Email"/>
             </div>
 
             <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+            <div class="form-group">
+                <label for="password" :value="__('Password')">Password</label>
 
-                <x-input id="password" class="block mt-1 w-full"
+                <input id="password" class="block mt-1 w-full" class="form-control"
                                 type="password"
                                 name="password"
                                 required autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+            <div class="form-group">
+                <label for="password_confirmation" :value="__('Confirm Password')">Password Again</label>
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
+                <input id="password_confirmation" class="block mt-1 w-full" class="form-control"
                                 type="password"
                                 name="password_confirmation" required />
             </div>
@@ -50,10 +50,9 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
+                <button class="sign-up" class="ml-4"> <a class="text-sm text-gray-700 dark:text-gray-500 underline">
+                    {{ __('Register') }}</a>
+                </button>
             </div>
         </form>
-    </x-auth-card>
-</x-guest-layout>
+    </div> <!--container cls-->
