@@ -25,7 +25,8 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/home', 'ArticleController@showAll');
-
+Route::get('/test', 'ArticleController@showCategory');
+Route::get('/category', 'ArticleController@showCategory')->name('category');;
 //Route::get('/createBlog', 'createBlogController@createBlog');
 Route::get('/createBlog', 'TestController@showAll');
 
@@ -37,4 +38,6 @@ Route::get('/master', function () {
 Route::get('/create', function () {
     return view('createPost');
 });
+
+
 

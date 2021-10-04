@@ -4,19 +4,6 @@
 
 @section('content')
 
-    <!-- showAllBlogs -->
-    <ul>
-        @foreach ($articles as $article)  
-        <li>
-            <b>{{$article->title}}</b>
-            <h4>{{$article->text}}</h4><br>
-            <h5>More Information:</h5>
-            <h5>{{$article->likes}}</h5>
-            <h3>{{$article->pictures}} - created by {{$article->user_id}}</h3>   
-            <hr><br>
-        </li>
-        @endforeach
-    </ul>
 
     <!-- header image -->
     <div class="img-header">
@@ -35,11 +22,38 @@
         </p>
     </div>
 
+    <!-- showAllBlogs -->
+    <ul>
+        @foreach ($articles as $article)  
+        <li>
+            <b>{{$article->title}}</b>
+            <h4>{{$article->text}}</h4><br>
+            <h5>More Information:</h5>
+            <h5>{{$article->likes}}</h5>
+            <h3>{{$article->pictures}} - created by {{$article->user_id}}</h3>   
+            <hr><br>
+        </li>
+        @endforeach
+    </ul>
     <!-- tabs with categories -->
     <div class="container mt-4 mb-5 pb-5">
         <h3 class="tabs-title pt-5 mb-4">Articles</h3>
+
         <ul class="nav nav-tabs">
-            <li class="nav-item">
+            
+
+            <form action="{{ route('category') }}">
+                <a  class="nav-link active" href="/home">All</a>
+
+                @foreach ($categories as $category)
+                <li class="nav-item">
+                    <button id="Cat" name="Cat" value="{{ $category->id }}" class="nav-link active">{{ $category->text }}</button>
+                </li>
+                @endforeach
+
+
+
+            {{-- <li class="nav-item">
                 <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
             </li>
             <li class="nav-item">
@@ -50,11 +64,32 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" href="#recipes">Recipes</a>
-            </li>
+            </li> --}}
+        </form>
+
+
         </ul>
+
+        <!-- create all blogs from DB -->
+   
         <div class="tab-content">
-            <div class="tab-pane active" id="all">
-                <div class="row border g-0 rounded shadow-sm category-row mt-4">
+            @foreach ($articles as $article) 
+                <div class="tab-pane active" id="all">
+                    <div class="row border g-0 rounded shadow-sm category-row mt-4">
+                        <div class="col-auto">
+                            <a href="#"><img src="img/bunny.jpg" class="img-thumbnail dimension"></a>
+                        </div>
+                        <div class="col article-content">
+                            <h2 class="article-title">{{ $article->title }}</h2>
+                            <p>{{$article->text}}</p>
+                            <button class="sign-up read-p"><a href="post.html">Read</a></button>
+                        </div>
+                    </div>
+            @endforeach
+       
+
+
+                {{-- <div class="row border g-0 rounded shadow-sm category-row mt-4">
                     <div class="col-auto">
                         <a href="#"><img src="img/bunny.jpg" class="img-thumbnail dimension"></a>
                     </div>
@@ -216,8 +251,8 @@
                         <button class="sign-up read-p"><a href="post.html">Read</a></button>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> --}}
+        </div> 
 
     </div>
 
