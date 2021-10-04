@@ -359,7 +359,7 @@ footer{
     ----------------- */
     #btt-btn{
         right: 20px;
-        bottom: 40px;
+        bottom: 50px;
         width: 45px;
         height: 45px;
     }
@@ -437,6 +437,22 @@ footer{
 
 
 /* ALL INPUTS STYLING */
+
+.form-group{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.chooseFile{
+    width: 45% !important;
+}
+
 label {
     margin: 20px 0 5px 0;
     text-align: left;
@@ -445,16 +461,12 @@ label {
 }
 
 input, select {
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 10px !important;
     width: 80% !important;
     background-color: var(--primaryColor) !important;
     color: var(--thirdColor) !important;
-}
-
-input:focus{
-    outline-color: var(--secondaryColor);
 }
 
 
@@ -478,17 +490,13 @@ select {
 
 /* TEXTAREA STYLING */
 textarea {
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
-    width: 95%;
-    height: 220px;
-    background-color: var(--primaryColor);
-    color: #002914;
-}
-
-textarea:focus{
-    outline-color: var(--secondaryColor);
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 10px !important;
+    width: 95% !important;
+    height: 220px !important;
+    background-color: var(--primaryColor) !important;
+    color: #002914 !important;
 }
 
 
@@ -533,6 +541,10 @@ textarea:focus{
 
     select{
         background-color: var(--primaryColor) !important;
+    }
+
+    .chooseFile{
+        width: 100% !important;
     }
 
     input, select, textarea{

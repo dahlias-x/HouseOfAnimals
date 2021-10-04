@@ -71,3 +71,22 @@
     
 
 
+                <div class="form-group">
+
+                    <label for="postText" aria-label="Text">Text</label>
+                    <textarea class="form-control" placeholder="Enter Text" id="postText" name="postText"></textarea>
+
+                </div>
+                @csrf
+                <button class="new-post create" type="submit">Create</button>
+            </form>
+        </div>
+        <!-- back to home button -->
+        <div class="container-fluid home-container">
+            @csrf
+            <button class="sign-up home-btn"><a href="/home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></button>
+        </div>
+    </div>
+
+
+@endsection
