@@ -4,19 +4,7 @@
 
 @section('content')
 
-    <!-- showAllBlogs -->
-    <ul>
-        @foreach ($articles as $article)  
-        <li>
-            <b>{{$article->title}}</b>
-            <h4>{{$article->text}}</h4><br>
-            <h5>More Information:</h5>
-            <h5>{{$article->likes}}</h5>
-            <h3>{{$article->pictures}} - created by {{$article->user_id}}</h3>   
-            <hr><br>
-        </li>
-        @endforeach
-    </ul>
+    
 
     <!-- header image -->
     <div class="img-header">
@@ -35,6 +23,19 @@
         </p>
     </div>
 
+    <!-- showAllBlogs -->
+    <ul>
+        @foreach ($articles as $article)  
+        <li>
+            <b>{{$article->title}}</b>
+            <h4>{{$article->text}}</h4><br>
+            <h5>More Information:</h5>
+            <h5>{{$article->likes}}</h5>
+            <h3>{{$article->pictures}} - created by {{$article->user_id}}</h3>   
+            <hr><br>
+        </li>
+        @endforeach
+    </ul>
     <!-- tabs with categories -->
     <div class="container mt-4 mb-5 pb-5">
         <h3 class="tabs-title pt-5 mb-4">Articles</h3>

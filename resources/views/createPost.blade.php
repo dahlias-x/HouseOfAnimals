@@ -19,7 +19,7 @@
                     <input type="file" class="form-control-file" id="chooseCategory">
                 </div>
                 <label for="category">Category</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="category">
+                <select class="form-control" id="category" name="category">
                     <option>-- Select Category --</option>
                     <option>Cats</option>
                     <option>Dogs</option>
