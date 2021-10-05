@@ -36,10 +36,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-list">
-                    <li class="nav-item navItem {{ (request()->is('home')) ? 'active' : '' }}">
-                        <a class="nav-link navlink" aria-current="page" href="/home" id="homePage">Home</a>
+                    <li class="nav-item navItem active">
+                        <a class="nav-link navlink" href="/home" id="homePage">Home</a>
                     </li>
-                    <li class="nav-item navItem {{ (request()->is('create')) ? 'active' : '' }}">
+                    <li class="nav-item navItem">
                         <a class="nav-link navlink" href="/create">Create a Post</a>
                     </li>
                     <li class="nav-item navItem">
@@ -80,13 +80,14 @@
 
      <!-- own js connection -->
      <script src="{{ asset('js/appa.js') }}"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+     
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
     integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
-    crossorigin="anonymous"></script>-->
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
     integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
     crossorigin="anonymous"></script>
-</body>
 
 </html>
 
