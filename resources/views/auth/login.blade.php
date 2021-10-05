@@ -17,12 +17,13 @@
 
             <!-- Password -->
             <div class="mt-4">
-                <label for="password" :value="__('Password')" />
+                <label for="password" :value="__('Password')">
 
                 <input id="password" class="block mt-1 w-full" class="form-control"
                                 type="password"
                                 name="password"
-                                required autocomplete="current-password" />
+                                required autocomplete="current-password"/>
+                </label>
             </div>
 
             <!-- Remember Me -->
@@ -44,4 +45,4 @@
                 {{ __('Log in') }}</a></button>
             </div>
         </form>
-    </div> <!--container cls-->
+    </div> 
