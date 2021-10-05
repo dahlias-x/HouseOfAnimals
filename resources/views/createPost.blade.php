@@ -28,7 +28,7 @@
                 <label name="title" for="title">Title</label>
                 <input type="text" name="title" placeholder="Title">
                 <label for="content">Text</label>
-                <textarea name="text" id="text" placeholder="Content"></textarea>
+                <textarea name="text" id="text" placeholder="Content" class="content-text"></textarea>
                 @csrf
                 <button class="new-post create" type="submit">Create</button>
             </form>

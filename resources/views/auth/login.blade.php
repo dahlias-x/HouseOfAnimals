@@ -4,26 +4,38 @@
 
 @section('content')
 
-    <div class="container">
-        <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
+<x-guest-layout>
+    <x-auth-card>
+        <x-slot name="logo">
+            <a href="/">
+                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            </a>
+        </x-slot>
+
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
+        <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <!-- Email Address -->
             <div>
-                <label for="email" :value="__('Email')" />
+                <x-label for="email" :value="__('Email')" />
 
-                <input id="email" class="block mt-1 w-full" class="form-control" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <label for="password" :value="__('Password')">
+                <x-label for="password" :value="__('Password')" />
 
-                <input id="password" class="block mt-1 w-full" class="form-control"
+                <x-input id="password" class="block mt-1 w-full"
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password"/>
-                </label>
             </div>
 
             <!-- Remember Me -->
@@ -41,8 +53,13 @@
                     </a>
                 @endif
 
-                <button class="sign-up"><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"> 
-                {{ __('Log in') }}</a></button>
+                <x-button class="ml-3">
+                    {{ __('Log in') }}
+                </x-button>
             </div>
         </form>
-    </div> 
+    </x-auth-card>
+</x-guest-layout>
+
+
+@endsection

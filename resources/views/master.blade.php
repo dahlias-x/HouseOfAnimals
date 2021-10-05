@@ -15,6 +15,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b823ffd591.js" crossorigin="anonymous"></script>
 
+    <!-- ionicons connection -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
     <!-- bootstrap connection -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -36,19 +40,35 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-list">
-                    <li class="nav-item navItem {{ (request()->is('home')) ? 'active' : '' }}">
-                        <a class="nav-link navlink" aria-current="page" href="/home" id="homePage">Home</a>
+                    <li class="nav-item navItem active">
+                        <a class="nav-link navlink" href="/home" id="homePage">Home</a>
                     </li>
-                    <li class="nav-item navItem {{ (request()->is('create')) ? 'active' : '' }}">
-                        <a class="nav-link navlink" href="/create">Create a Post</a>
-                    </li>
+                    @auth
+                        <li class="nav-item navItem">
+                            <a class="nav-link navlink" href="/create">Create a Post</a>
+                        </li>
+                    @endauth
                     <li class="nav-item navItem">
                         <a class="nav-link navlink" href="#">Blog Rules</a>
                     </li>
                     @if (Route::has('login'))
-                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block reg-btn">
                             @auth
-                                <button class="sign-up"><a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a></button>
+                               <!---- <button class="sign-up"><a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a></button> -->
+                                
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button class="sign-up">
+                                        <!---<x-responsive-nav-link :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                           // {{ __('Log Out') }}
+                                        </x-responsive-nav-link>-->
+                                        {{ __('Log Out') }}
+                                        </button>
+                                    </form>
+                                
                             @else
                                 <button class="sign-up"><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a></button>
 
@@ -58,8 +78,6 @@
                             @endauth
                         </div>
                     @endif
-                    @csrf
-                    <!-- <button class="sign-up"><a href="#">Sign Up</a></button> -->
                 </ul>
             </div>
         </div>
@@ -80,13 +98,14 @@
 
      <!-- own js connection -->
      <script src="{{ asset('js/appa.js') }}"></script>
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+     
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
     integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
     integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
     crossorigin="anonymous"></script>
-</body>
 
 </html>
 
