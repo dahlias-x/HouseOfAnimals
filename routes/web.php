@@ -39,5 +39,6 @@ Route::get('/create', function () {
     return view('createPost');
 });
 
-
-
+Route::get('/article', function () {
+    return view('fullPost');
+});
