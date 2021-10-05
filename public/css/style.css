@@ -560,3 +560,100 @@ textarea {
         transform: translateX(-28px);
     }
 }
+
+
+/* ################
+    LOGIN STYLING
+############### */
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    padding: 50px !important;
+}
+
+.loginForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.remember-block{
+    align-self: flex-start;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.remember-box{
+    display: flex;
+    align-items: baseline !important;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.check-rem{
+    width: 5% !important;
+    margin-right: 30px !important;
+    -webkit-transform: scale(1.3); /* Safari and Chrome */
+}
+
+.forgot{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.info-label{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.forgot-link{
+    color: var(--thirdColor);
+}
+
+.forgot-link:hover{
+    color: var(--secondaryColor);
+}
+
+/* #################
+    MOBILE STYLING
+################ */
+
+@media screen and (max-width: 500px) {
+
+    .email-info{
+        margin-top: 0 !important;
+    }
+
+    .password-info{
+        margin-top: 10px !important;
+    }
+    .login-container{
+        width: 95%;
+        padding: 20px !important;
+    }
+   
+    .remember-block label{
+        font-size: 15px !important;
+        margin-top: 10px !important;
+    }
+
+    .forgot-link{
+        font-size: 15px;
+        width: 30%;
+    }
+
+    .info-label{
+        font-size: 15px;
+    }
+
+    .forgot{
+        width: 100%;
+        margin-top: 0 !important;
+    }
+    .home-container{
+        margin-top: 20px;
+    }
+}
