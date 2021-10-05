@@ -4,6 +4,7 @@
 
 @section('content')
 
+<guest-layout>
     <div class="container">
         <!-- Validation Errors -->
         <auth-validation-errors class="mb-4" :errors="$errors" />
@@ -50,9 +51,9 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <button class="sign-up" class="ml-4"> <a class="text-sm text-gray-700 dark:text-gray-500 underline">
-                    {{ __('Register') }}</a>
-                </button>
+                <button class="sign-up" class="ml-4">  {{ __('Register') }}</button>
             </div>
         </form>
     </div> <!--container cls-->
+    </guest-layout>
+    @endsection

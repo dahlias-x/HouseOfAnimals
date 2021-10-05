@@ -40,8 +40,10 @@
                     </a>
                 @endif
 
-                <button class="sign-up"><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"> 
+                <button class="sign-up"><a href="" class="text-sm text-gray-700 dark:text-gray-500 underline"> 
                 {{ __('Log in') }}</a></button>
             </div>
         </form>
     </div> <!--container cls-->
+
+    @endsection
