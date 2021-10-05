@@ -13,23 +13,22 @@
         </div>
 
         <div class="container form-container w-100">
-            <form class="newPost" action="/articleCreate" method="post">
+            <form class="newPost" action="{{ route('safe') }}" method="POST">
                 <div class="form-group">
-                    <label for="chooseCategory">Choose a picture</label>
-                    <input type="file" class="form-control-file" id="chooseCategory">
+                    <label for="picture">Choose a picture</label>
+                    <input name="image" id="image" type="file" class="form-control-file">
                 </div>
-                <label for="category">Category</label>
+                <label name="category" for="category">Category</label>
                 <select class="form-control" id="category" name="category">
                     <option>-- Select Category --</option>
-                    <option>Cats</option>
-                    <option>Dogs</option>
-                    <option>Rabbits</option>
-                    <option>Birds</option>
+                    @foreach ($categories as $category) 
+                    <option value="{{ $category->id }}">{{ $category->text }}</option>
+                @endforeach
                 </select>
-                <label for="title">Title</label>
+                <label name="title" for="title">Title</label>
                 <input type="text" name="title" placeholder="Title">
                 <label for="content">Text</label>
-                <textarea name="content" placeholder="Content"></textarea>
+                <textarea name="text" id="text" placeholder="Content" class="content-text"></textarea>
                 @csrf
                 <button class="new-post create" type="submit">Create</button>
             </form>
