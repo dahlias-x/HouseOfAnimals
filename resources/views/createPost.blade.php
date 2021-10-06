@@ -9,26 +9,24 @@
     </div>
     <div class="container-fluid site-container">
         <div class="site-title">
-            <h1>Create a new Post</h1>
+            <h1>Create a Post</h1>
         </div>
 
         <div class="container form-container w-100">
             <form class="newPost" action="{{ route('safe') }}" method="POST">
                 <div class="form-group">
-                    <label for="picture">Choose a picture</label>
-                    <input name="image" id="image" type="file" class="form-control-file">
+                    <label class="create-label" for="picture">Choose picture</label>
+                    <input type="file" class="chooseFile form-control-file" id="picture" name="picture">
                 </div>
-                <label name="category" for="category">Category</label>
-                <select class="form-control" id="category" name="category">
+                <label class="create-label" name="Category" for="category">Category</label>
+                <select class="form-control select-category" id="category" name="Category">
                     <option>-- Select Category --</option>
-                    @foreach ($categories as $category) 
-                    <option value="{{ $category->id }}">{{ $category->text }}</option>
-                @endforeach
+                    
                 </select>
-                <label name="title" for="title">Title</label>
-                <input type="text" name="title" placeholder="Title">
-                <label for="content">Text</label>
-                <textarea name="text" id="text" placeholder="Content" class="content-text"></textarea>
+                <label class="create-label" name="Title" for="title">Title</label>
+                <input class="text-title" type="text" name="Title" placeholder="Title">
+                <label class="create-label" for="text" name="Text">Text</label>
+                <textarea class="content-text" id="text" name="Text" placeholder="Content"></textarea>
                 @csrf
                 <button class="new-post create" type="submit">Create</button>
             </form>
@@ -37,7 +35,7 @@
         <!-- back to home button -->
         <div class="container-fluid home-container">
             @csrf
-            <button class="sign-up home-btn"><a href="/home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></button>
+            <button class="sign-up home-btn"><a href="/home"><i class="fa fa-home"></i>Home</a></button>
         </div>
     </div>
 
