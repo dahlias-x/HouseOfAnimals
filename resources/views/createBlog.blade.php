@@ -11,7 +11,7 @@
     <div class="site-title">
         <h1>Create a new Post</h1>
     </div>
-
+    @auth
     <div class="container form-container w-100">
         <form class="newPost" action="/articleCreate" method="post">
             <div class="form-group">
@@ -33,7 +33,7 @@
             <button class="new-post create" type="submit">Create</button>
         </form>
     </div>
-
+    @endauth
     <!-- back to home button -->
     <div class="container-fluid home-container">
         @csrf

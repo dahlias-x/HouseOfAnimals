@@ -11,9 +11,12 @@
         <div class="site-title">
             <h1>Create a Post</h1>
         </div>
-
+    @auth
         <div class="container form-container w-100">
-            <form class="newPost" action="{{ route('safe') }}" method="POST">
+            <div class="site-title">
+                <h1>Create a Post</h1>
+            </div>
+            <form class="newPost" action="" method="POST">
                 <div class="form-group">
                     <label class="create-label" for="picture">Choose picture</label>
                     <input type="file" class="chooseFile form-control-file" id="picture" name="picture">
@@ -21,7 +24,7 @@
                 <label class="create-label" name="Category" for="category">Category</label>
                 <select class="form-control select-category" id="category" name="Category">
                     <option>-- Select Category --</option>
-                    
+                  
                 </select>
                 <label class="create-label" name="Title" for="title">Title</label>
                 <input class="text-title" type="text" name="Title" placeholder="Title">
@@ -31,12 +34,12 @@
                 <button class="new-post create" type="submit">Create</button>
             </form>
         </div>
-
+@endauth
         <!-- back to home button -->
-        <div class="container-fluid home-container">
+        <!--  <div class="container-fluid home-container">
             @csrf
             <button class="sign-up home-btn"><a href="/home"><i class="fa fa-home"></i>Home</a></button>
-        </div>
+        </div> --> 
     </div>
 
 
