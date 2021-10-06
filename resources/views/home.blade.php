@@ -21,7 +21,11 @@
             recipes for homemade treats!
         </p>
     </div>
+    @auth 
 
+    <!-- <h1>Du bist eingelogt</h1> -->
+
+    @endauth
     <!-- showAllBlogs -->
     <ul>
         @foreach ($articles as $article)  
