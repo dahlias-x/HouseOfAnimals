@@ -8,8 +8,10 @@
         <img src="img/doggies.jpeg" alt="">
     </div>
     <div class="container-fluid site-container">
-        
-
+        <div class="site-title">
+            <h1>Create a Post</h1>
+        </div>
+    @auth
         <div class="container form-container w-100">
             <div class="site-title">
                 <h1>Create a Post</h1>
@@ -32,12 +34,12 @@
                 <button class="new-post create" type="submit">Create</button>
             </form>
         </div>
-
-        <!-- back to home button
-        <div class="container-fluid home-container">
+@endauth
+        <!-- back to home button -->
+        <!--  <div class="container-fluid home-container">
             @csrf
             <button class="sign-up home-btn"><a href="/home"><i class="fa fa-home"></i>Home</a></button>
-        </div> -->
+        </div> --> 
     </div>
 
 

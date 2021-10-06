@@ -27,28 +27,14 @@
             <h3 class="tabs-title pt-5 mb-4">Articles</h3>            
                 <form action="{{ route('category') }}">
                     <ul class="nav nav-tabs">
-                        <a class="nav-link active" data-bs-toggle="tab" href="">All</a>
+                        <a class="nav-link active" data-bs-toggle="tab" href="./home">All</a>
 
                         @foreach ($categories as $category)
                         <li class="nav-item">
-                            <button id="Cat" name="Cat" data-bs-toggle="tab" value="{{ $category->id }}" class="nav-link active">{{ $category->text }}</button>
+                            <button id="Cat" name="Cat"  value="{{ $category->id }}" class="nav-link active">{{ $category->text }}</button>
                         </li>
                         @endforeach
-
-
-
-                        {{-- <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="tab" href="#all">All</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#cats">Cats</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#dogs">Dogs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#recipes">Recipes</a>
-                        </li> --}}
+                        
                     </ul>
                 </form>
             
@@ -65,7 +51,7 @@
                             <div class="col article-content">
                                 <h2 class="article-title">{{ $article->title }}</h2>
                                 <p>{{$article->text}}</p>
-                                <button class="sign-up read-p"><a href="">Read</a></button>
+                                <button class="sign-up read-p"><a href="/article/{{$article->id}}">Read</a></button>
                             </div>
                         </div>
                     </div>

@@ -27,7 +27,6 @@ require __DIR__.'/auth.php';
 Route::get('/home', 'ArticleController@showAll');
 Route::get('/test', 'ArticleController@showCategory');
 Route::get('/category', 'ArticleController@showCategory')->name('category');;
-//Route::get('/createBlog', 'createBlogController@createBlog');
 Route::get('/createBlog', 'TestController@showAll');
 
 Route::get('/master', function () {
@@ -42,3 +41,9 @@ Route::get('/create', function () {
 Route::get('/article', function () {
     return view('fullPost');
 });
+
+
+
+Route::get('/article/{id}','ArticleController@data');
+Route::get('/article/{id}', 'ArticleController@view');
+Route::delete('/article/{id}', 'ArticleController@delete');
