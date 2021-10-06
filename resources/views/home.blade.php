@@ -58,14 +58,14 @@
             <div class="tab-content">
                 @foreach ($articles as $article) 
                     <div class="tab-pane active" id="all">
-                        <div class="row border g-0 rounded shadow-sm category-row mt-4">
+                        <div class="row border g-0 rounded shadow-sm category-row">
                             <div class="col-auto">
                                 <a href="#"><img src="img/bunny.jpg" class="img-thumbnail dimension"></a>
                             </div>
                             <div class="col article-content">
                                 <h2 class="article-title">{{ $article->title }}</h2>
                                 <p>{{$article->text}}</p>
-                                <button class="sign-up read-p"><a href="post.html">Read</a></button>
+                                <button class="sign-up read-p"><a href="">Read</a></button>
                             </div>
                         </div>
                     </div>

@@ -52,7 +52,7 @@
                         <a class="nav-link navlink" href="#">Blog Rules</a>
                     </li>
                     @if (Route::has('login'))
-                        <div class="hidden sm:block reg-btns">
+                        <div class="sm:block reg-btn">
                             @auth                                
                                     <!-- Authentication -->
                                     <form method="POST" action="{{ route('logout') }}">
