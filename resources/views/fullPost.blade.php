@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- site content -->
-    <div class="container-fluid site-container">
+    <div class="container-fluid site-container mt-5">
         <div class="container form-container post-container w-100">
             <h1 class="post-title">Hello World</h1> <!-- post title -->
             <p class="author">written by: Carolina</p> <!-- written by -->
@@ -78,11 +78,11 @@
             </ul>
         </div>
 
-        <!-- back to home button -->
+        <!-- back to home button
         <div class="container-fluid home-container">
             @csrf
             <button class="sign-up home-btn"><a href="/home"><i class="fa fa-home" aria-hidden="true"></i>Home</a></button>
-        </div>
+        </div> -->
     </div>
 
 @endsection

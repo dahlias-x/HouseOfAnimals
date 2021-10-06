@@ -161,8 +161,8 @@ nav {
 
 /* nav tabs */
 .nav-tabs .nav-link.active {
-    background-color: var(--secondaryColor) !important;
-    color: var(--white) !important;
+    background-color: var(--white) !important;
+    color: var(--secondaryColor) !important;
     border: 2px solid var(--secondaryColor) !important;
     font-weight: 600;
 }
@@ -177,8 +177,8 @@ nav {
 }
 
 .nav-tabs .nav-link:hover {
-    border: 1px solid var(--secondaryColor) !important;
-    color: var(--secondaryColor);
+    color: var(--white) !important;
+    background-color: var(--secondaryColor) !important;
 }
 
 .nav-tabs {
@@ -375,7 +375,7 @@ footer {
     ----------------- */
     #btt-btn {
         right: 20px;
-        bottom: 50px;
+        bottom: 55px;
         width: 45px;
         height: 45px;
     }
@@ -410,7 +410,7 @@ footer {
 }
 
 .site-title {
-    text-align: center !important;
+    text-align: left !important;
     width: 100%;
     color: var(--secondaryColor);
     margin-bottom: 30px;
@@ -526,7 +526,7 @@ footer {
 
 .home-container {
     display: flex;
-    justify-content: center !important;
+    justify-content: flex-end !important;
     margin-top: 60px;
 }
 
@@ -540,6 +540,7 @@ footer {
     }
     .form-container {
         padding: 20px !important;
+        margin-bottom: 70px;
     }
 
     .select-category {
@@ -647,13 +648,14 @@ footer {
     padding: 5px 20px !important;
     text-transform: uppercase;
     border-radius: 5px;
-}
-
-.login-btn a{
     font-size: 16px !important;
     font-weight: 600 !important;
     color: var(--white);
     text-decoration: none;
+}
+
+.login-btn a{
+    
 }
 
 .already-link{
@@ -664,6 +666,20 @@ footer {
     color: var(--black);
 }
 
+.reg-button{
+    margin-left: 20px !important;
+    background-color: var(--secondaryColor);
+    border: none;
+    padding: 5px 20px !important;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.reg-button a{
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--white) !important;
+}
 
 /* #################
     MOBILE STYLING
@@ -796,6 +812,7 @@ footer {
 /* leave a comment section */
 .comment-container{
     margin-top: 50px;
+    padding: 40px;
 }
 
 .comment-container h4{
@@ -827,6 +844,7 @@ footer {
 /* already posted comments */
 .comment-section{
     margin-top: 60px !important;
+    padding: 40px;
 }
 
 .section-title{

@@ -56,16 +56,16 @@
                     </a>
 
                     <button class="login-btn">
-                        <a href="">{{ __('Log in') }}</a>
+                        {{ __('Log in') }}
                     </button>
                 </div>
             </form>  
         </div>
-        <!-- back to home button -->
+        <!-- back to home button
         <div class="container-fluid home-container">
             @csrf
             <button class="sign-up"><a href="/home"><i class="fa fa-home"></i>Home</a></button>
-        </div>    
+        </div>     -->
     </x-auth-card>
 </x-guest-layout>
 

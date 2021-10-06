@@ -31,7 +31,7 @@
 
                         @foreach ($categories as $category)
                         <li class="nav-item">
-                            <a id="Cat" name="Cat" data-bs-toggle="tab" value="{{ $category->id }}" class="nav-link active">{{ $category->text }}</a>
+                            <button id="Cat" name="Cat" data-bs-toggle="tab" value="{{ $category->id }}" class="nav-link active">{{ $category->text }}</button>
                         </li>
                         @endforeach
 

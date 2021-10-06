@@ -59,8 +59,8 @@
                         {{ __('Already registered?') }}
                     </a>
 
-                    <button class="login-btn">
-                        <a href="">{{ __('Register') }}</a>
+                    <button class="reg-button">
+                        {{ __('Register') }}
                     </button>
                 </div>
             </form>
