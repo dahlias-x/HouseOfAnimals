@@ -52,10 +52,8 @@
                         <a class="nav-link navlink" href="#">Blog Rules</a>
                     </li>
                     @if (Route::has('login'))
-                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block reg-btn">
-                            @auth
-                               <!---- <button class="sign-up"><a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a></button> -->
-                                
+                        <div class="sm:block reg-btn">
+                            @auth                                
                                     <!-- Authentication -->
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
@@ -70,10 +68,10 @@
                                     </form>
                                 
                             @else
-                                <button class="sign-up"><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a></button>
+                                <button class="sign-up"><a href="{{ route('login') }}" >Log in</a></button>
 
                                 @if (Route::has('register'))
-                                    <button class="sign-up"><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a></button>
+                                    <button class="sign-up"><a href="{{ route('register') }}">Register</a></button>
                                 @endif
                             @endauth
                         </div>
@@ -90,7 +88,7 @@
      <button type="button" class="btn btn-danger btn-floating btn-lg" id="btt-btn">
         <i class="fas fa-chevron-up"></i>
     </button>
-     <!-- <button class="btt mb-5"><a href="#top"></a></button> -->
+
     <!-- footer -->
     <footer>
         &copy; copyright 2021. Website made by <i class="company">House Of Animals</i> team
