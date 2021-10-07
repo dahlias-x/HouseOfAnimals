@@ -49,7 +49,7 @@
                         </li>
                     @endauth
                     <li class="nav-item navItem">
-                        <a class="nav-link navlink" href="#">Blog Rules</a>
+                        <a class="nav-link navlink" href="/rules">Blog Rules</a>
                     </li>
                     @if (Route::has('login'))
                         <div class="sm:block reg-btn">

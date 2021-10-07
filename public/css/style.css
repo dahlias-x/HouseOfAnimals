@@ -1005,3 +1005,82 @@ footer {
         padding: 0;
     }
 }
+
+
+/* ######################
+    BLOG RULES STYLING
+##################### */
+
+.rules-container{
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.rules-title{
+    text-align: center !important;
+}
+.rules-img-link{
+    width: 500px;
+    align-self: flex-start;
+}
+
+.rules-img{
+    width: 500px;
+}
+
+.rules{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.rules-list{
+    justify-self: flex-start !important;
+}
+.rules-item{
+    font-size: 20px;
+}
+
+.overall-container{
+    height: 77.5vh !important;
+}
+
+/* #################
+    MOBILE STYLING 
+################ */
+
+@media screen and (max-width: 500px) {
+    
+    .rules-container{
+        margin-top: 30px;
+    }
+    .rules-img-link{
+        width: 100%;
+    }
+    
+    .rules-img{
+        width: 100%;
+    }
+    
+    .rules{
+        flex-direction: column !important;
+        margin-top: 0 !important;
+    }
+    
+    .rules-list{
+        margin-top: 30px;
+    }
+    .rules-item{
+        font-size: 18px;
+    }
+    
+    .overall-container{
+        height: 100% !important;
+    }
+    
+}
