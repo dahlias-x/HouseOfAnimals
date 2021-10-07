@@ -32,14 +32,16 @@ Route::get('/master', function () {
 });
 
 
-
-
-
-
-
 Route::get('/article/{id}','ArticleController@getusername');
 Route::get('/article/{id}', 'ArticleController@view');
 Route::delete('/article/{id}', 'ArticleController@delete');
 Route::get('/create', 'CreatePostController@getCat');
 Route::post('/create', 'CreatePostController@store')->name('addimage');
-// Route::post('/comment', 'CreatePostController@storecomment')->name('text');
+
+Route::get('/article', function () {
+    return view('fullPost');
+});
+
+Route::get('/rules', function () {
+    return view('blogRules');
+});
