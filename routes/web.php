@@ -25,25 +25,23 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/home', 'ArticleController@showAll');
-Route::get('/test', 'ArticleController@showCategory');
-Route::get('/category', 'ArticleController@showCategory')->name('category');;
-Route::get('/createBlog', 'TestController@showAll');
-
+Route::get('/category', 'ArticleController@showCategory')->name('category');
+Route::get('/article/{id}', 'ArticleController@showCategory')->name('category');
 Route::get('/master', function () {
     return view('master');
 });
 
 
-Route::get('/create', function () {
-    return view('createPost');
-});
+Route::get('/article/{id}','ArticleController@getusername');
+Route::get('/article/{id}', 'ArticleController@view');
+Route::delete('/article/{id}', 'ArticleController@delete');
+Route::get('/create', 'CreatePostController@getCat');
+Route::post('/create', 'CreatePostController@store')->name('addimage');
 
 Route::get('/article', function () {
     return view('fullPost');
 });
 
-
-
-Route::get('/article/{id}','ArticleController@data');
-Route::get('/article/{id}', 'ArticleController@view');
-Route::delete('/article/{id}', 'ArticleController@delete');
+Route::get('/rules', function () {
+    return view('blogRules');
+});
