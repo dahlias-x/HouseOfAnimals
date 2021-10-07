@@ -9,5 +9,5 @@ class CreatePost extends Model
 {
     use HasFactory;
     protected $table = 'articles';
-    protected $fillable = ['image', 'category', 'title', 'text', 'like'];
+    protected $fillable = ['image', 'category', 'title', 'text', 'like', 'user_id'];
 }

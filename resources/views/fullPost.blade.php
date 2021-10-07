@@ -9,7 +9,7 @@
         <div class="container form-container post-container w-100">
             <h1 class="post-title">{{ $article->title }}</h1> <!-- post title -->
             <p class="author">written by: {{ $article->user->name }}</p> <!-- written by -->
-                <span class="timeup">published:  {{$article->created_at->diffForHumans();}}  </span>
+                <span class="timeup">published: {{$article->created_at->diffForHumans();}} </span>
             <div class="post-full">
                 <img src="/img/bunny.jpg" alt="alt" class="post-img"> <!-- post img -->
                 <p class="post-text">
