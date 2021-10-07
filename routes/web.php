@@ -42,3 +42,4 @@ Route::get('/article/{id}', 'ArticleController@view');
 Route::delete('/article/{id}', 'ArticleController@delete');
 Route::get('/create', 'CreatePostController@getCat');
 Route::post('/create', 'CreatePostController@store')->name('addimage');
+// Route::post('/comment', 'CreatePostController@storecomment')->name('text');

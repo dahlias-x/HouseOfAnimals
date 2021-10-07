@@ -31,7 +31,7 @@
         <!-- leave comment -->
         <div class="container comment-container w-100">
             <h4 class="leave-comment">Leave us a comment:</h4>
-            <textarea rows="2" cols="10" class="comment" placeholder="Write a comment"></textarea>
+            <textarea rows="2" cols="10" class="comment" placeholder="Write a comment" name="text" id="text"></textarea>
             <button class="sign-up comment-submit">Submit</button>
         </div>
 

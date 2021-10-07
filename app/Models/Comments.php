@@ -18,5 +18,6 @@ class comments extends Model
     public function articles() {
         return $this->belongsTo(Article::class);
     }
-    
+    protected $table = 'comments';
+    protected $fillable = ['text', 'user_id'];
 }
