@@ -27,7 +27,7 @@
             <h3 class="tabs-title pt-5 mb-4">Articles</h3>            
                 <form action="{{ route('category') }}">
                     <ul class="nav nav-tabs">
-                        <a class="nav-link active" data-bs-toggle="tab" href="./home">All</a>
+                        <a class="nav-link active" data-bs-toggle="tab" href="/home">All</a>
 
                         @foreach ($categories as $category)
                         <li class="nav-item">
